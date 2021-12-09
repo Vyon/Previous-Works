@@ -1,0 +1,2 @@
+# Previous Works
+This repository consists of most of my old projects / code in Luau. Almost none of this work is new but there are some parts that I have edited recently those have comments specifying when the edit was made. Note that some of this code may be very gross and sloppy, you must take into consideration that most of this was written from 2019 to early 2021. I recommend that if you do use any of these that you do your best to optimize them and or make them better.
