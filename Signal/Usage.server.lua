@@ -1,17 +1,17 @@
---[[
-	@Edits
-	12/9/2021:
-		Added signal usage
---]]
+local repl = game:GetService('ReplicatedStorage')
 
-local signal = require(script.Signal).New()
+local listener = require(repl.Shared.Signal)
 
-local connection = signal:Connect(function()
-	print('Hello World!')
+local signal = listener.New()
+
+signal:Create('Test')
+
+signal:Connect('Test', function(num1, num2)
+	print(num1 + num2)
 end)
 
-signal:Fire() --> Activates signal
+signal:Fire('Test', 2, 4)
 
-signal:Disconnect(connection)
+signal:Disconnect('Test')
 
-signal:Fire() --> Tests if the signal is still active
+signal:Dump()
